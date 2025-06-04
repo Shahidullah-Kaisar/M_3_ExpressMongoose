@@ -5,13 +5,13 @@ class SchoolBell extends EventEmitter {}
 
 const schoolBell = new SchoolBell();
 
-schoolBell.on('ring', ()=>{ // ring is event name
-    console.log("Yahoo!! Class sesh"); //event listener (মানে, event টা ঘটলে কী হবে সেটা বলে দেওয়া)
+schoolBell.on('ring', ()=>{ // create event.. ring is event name
+    console.log("Yahoo!! Class sesh"); //event listener (মানে, event টা trigger hoile কী হবে সেটা বলে দেওয়া)
 })
 schoolBell.on('ring', ()=>{
     console.log("Oh No!! R o ekta class ache");
 })
-schoolBell.on('broken', ()=>{
+schoolBell.on('broken', ()=>{  //create event.. broken is event name
     console.log("class ki sesh hobe na?");
 })
 

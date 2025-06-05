@@ -6,10 +6,5 @@
   {
     "title": "Learning JSON",
     "body": "JSON is a lightweight format for storing and transporting data."
-  },
-  {
-    "title": "Last Post",
-    "body": "This is the body of the Last post.",
-    "createdAt": "6/5/2025, 12:30:01 AM"
   }
 ]

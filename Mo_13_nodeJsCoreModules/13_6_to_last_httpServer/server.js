@@ -62,7 +62,7 @@ const server = http.createServer((req, res) =>{
         })
     }
     // Get single data
-    else if(pathname === '/todo' && req.method === 'GET'){
+    else if(pathname === '/todos' && req.method === 'GET'){
         console.log(pathname, "single todo");
 
         const title = url.searchParams.get('title');
@@ -86,7 +86,7 @@ const server = http.createServer((req, res) =>{
         
     }
     // update todo
-    else if(pathname === '/todo/update-todo' && req.method === 'PATCH'){
+    else if(pathname === '/todos/update-todo' && req.method === 'PATCH'){
 
         const title = url.searchParams.get('title');
 
@@ -119,7 +119,7 @@ const server = http.createServer((req, res) =>{
         })
     }
     // delete todo
-    else if(pathname === '/todo/delete-todo' && req.method === 'DELETE'){
+    else if(pathname === '/todos/delete-todo' && req.method === 'DELETE'){
 
         const title = url.searchParams.get('title');
 

@@ -63,6 +63,7 @@ todosRouter.put('/update-todo/:id', async(req : Request, res : Response) => {
     
     res.send(updatedTodo);
 })
+
 todosRouter.delete('/delete-todo/:id', async(req : Request, res : Response) => {
 
     const id = req.params.id // '/:id'-----> url er id bosate hobe params er pore
@@ -80,3 +81,11 @@ todosRouter.delete('/delete-todo/:id', async(req : Request, res : Response) => {
 // const db = await client.db("todosDB"); // MongoDB-তে আগে থেকেই থাকা ডাটাবেজকে access (মানে: একসেস) করবে।
 
 //     const collection = await db.collection("todos")
+/*
+
+upsert: true মানে কি?
+
+"update" না পেলে "insert" করো" — অর্থাৎ:
+যদি filterId অনুযায়ী কোনো document পাওয়া যায়, তাহলে সেটা update হবে।
+আর যদি না পাওয়া যায়, তাহলে ওই data insert (create) করে ফেলবে।
+*/

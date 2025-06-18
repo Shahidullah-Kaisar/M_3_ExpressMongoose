@@ -33,7 +33,7 @@ const noteSchema = new mongoose.Schema(
 
 const Note = mongoose.model("Note", noteSchema);
 
-app.post("/create-note", async (req: Request, res: Response) => {
+app.post("/notes/create-note", async (req: Request, res: Response) => {
   const body = req.body;
   console.log("body", body);
 
@@ -61,7 +61,7 @@ app.post("/create-note", async (req: Request, res: Response) => {
   });
 });
 
-app.patch("/updateNote/:id", async (req: Request, res: Response) => {
+app.patch("/notes/updateNote/:id", async (req: Request, res: Response) => {
   const id = req.params.id;
   console.log("id", id);
 
@@ -79,7 +79,7 @@ app.patch("/updateNote/:id", async (req: Request, res: Response) => {
   });
 });
 
-app.delete("/deleteNote/:id", async (req: Request, res: Response) => {
+app.delete("/notes/deleteNote/:id", async (req: Request, res: Response) => {
   const id = req.params.id;
   console.log(id);
 
@@ -94,7 +94,7 @@ app.delete("/deleteNote/:id", async (req: Request, res: Response) => {
   });
 });
 
-app.get("/singleNote/:id", async (req: Request, res: Response) => {
+app.get("/notes/singleNote/:id", async (req: Request, res: Response) => {
   const id = req.params.id;
   console.log("id", id);
 
@@ -108,7 +108,7 @@ app.get("/singleNote/:id", async (req: Request, res: Response) => {
   });
 });
 
-app.get("/allNote", async (req: Request, res: Response) => {
+app.get("/notes", async (req: Request, res: Response) => {
   const allNote = await Note.find();
 
   res.status(201).json({
